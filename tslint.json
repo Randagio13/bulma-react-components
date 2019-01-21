@@ -1,0 +1,9 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-standard"],
+  "rules": {
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
+    "interface-name": false,
+    "jsx-boolean-value": false
+  }
+}

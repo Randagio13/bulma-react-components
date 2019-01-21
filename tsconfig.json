@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "baseUrl": "./",
+        "lib": [
+            "esnext",
+            "dom.iterable",
+            "dom"
+        ],
+        "paths": {
+            "components": ["src/components"],
+            "containers": ["src/containers"],
+            "constants": ["src/constants"],
+            "types": ["src/types"],
+            "images": ["src/images"],
+            "reducers": ["src/reducers"],
+            "reducers/*": ["src/reducers/*"],
+            "helpers": ["src/helpers"],
+            "routes": ["src/routes"]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
