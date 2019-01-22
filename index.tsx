@@ -14,8 +14,8 @@ const renderApp = (Component: any) => {
 
 renderApp(
   <div>
-    <Box primary>
-      {'ciao'}
+    <Box color='red'>
+      {'miao'}
     </Box>
   </div>
 )
