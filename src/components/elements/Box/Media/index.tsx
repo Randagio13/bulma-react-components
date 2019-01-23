@@ -3,7 +3,7 @@ import styled from 'styled-components'
 interface Props {
   bgColor?: string
   color?: string
-  padding?: string,
+  padding?: string
 }
 
 const Media = styled.article`

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { Box, MediaImage } from './src'
+import { Box, Image, MediaImage } from './src'
 
 const renderApp = (Component: any) => {
   ReactDOM.render(
@@ -16,7 +16,7 @@ renderApp(
   <div>
     <Box color='red'>
       <MediaImage>
-        {'miao'}
+        <Image size='4by3' rounded />
       </MediaImage>
     </Box>
   </div>
