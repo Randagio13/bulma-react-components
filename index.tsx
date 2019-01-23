@@ -16,7 +16,7 @@ renderApp(
   <div>
     <Box color='red'>
       <MediaImage>
-        <Image size='4by3' rounded />
+        <Image size='128' src='https://bulma.io/images/placeholders/128x128.png' />
       </MediaImage>
     </Box>
   </div>

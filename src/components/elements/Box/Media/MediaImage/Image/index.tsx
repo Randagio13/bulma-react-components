@@ -2,15 +2,17 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 interface Props {
-  className?: string
+  className?: string,
+  src: string
+  alt?: string
 }
 
 class ImageComponent extends React.Component<Props> {
   public render (): JSX.Element {
-    const { className } = this.props
+    const { className, src, alt } = this.props
     return (
       <figure className={className}>
-        <img src='https://bulma.io/images/placeholders/128x128.png' />
+        <img src={src} alt={alt} />
       </figure>
     )
   }
