@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader'
 import { Box, Image, MediaImage } from './src'
 import MediaContent from './src/components/elements/Box/Media/MediaContent'
 import Content from './src/components/elements/Content'
+import GlobalStyle from './src/global/style'
 
 const renderApp = (Component: any) => {
   ReactDOM.render(
@@ -16,13 +17,18 @@ const renderApp = (Component: any) => {
 
 renderApp(
   <div>
-    <Box color='red'>
+    <GlobalStyle />
+    <Box>
       <MediaImage>
         <Image size='128' src='https://bulma.io/images/placeholders/128x128.png' />
       </MediaImage>
       <MediaContent>
-        <Content size='large'>
-          <h1>Miao</h1>
+        <Content>
+          <p>
+            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+            <br/>
+            {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.'}
+          </p>
         </Content>
       </MediaContent>
     </Box>
