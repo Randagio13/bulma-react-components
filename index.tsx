@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Box, Image, MediaImage } from './src'
+import Level from './src/components/elements/Box/Media/Level'
 import MediaContent from './src/components/elements/Box/Media/MediaContent'
 import Content from './src/components/elements/Content'
 import GlobalStyle from './src/global/style'
@@ -30,6 +31,9 @@ renderApp(
             {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.'}
           </p>
         </Content>
+        <Level isMobile contentPosition='right'>
+          ciao
+        </Level>
       </MediaContent>
     </Box>
   </div>
