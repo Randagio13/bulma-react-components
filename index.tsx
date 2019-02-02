@@ -3,8 +3,10 @@ import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Box, Image, MediaImage } from './src'
 import Level from './src/components/elements/Box/Media/Level'
+import LevelItem from './src/components/elements/Box/Media/Level/Item'
 import MediaContent from './src/components/elements/Box/Media/MediaContent'
 import Content from './src/components/elements/Content'
+import Icon from './src/components/elements/Icon'
 import GlobalStyle from './src/global/style'
 
 const renderApp = (Component: any) => {
@@ -32,7 +34,12 @@ renderApp(
           </p>
         </Content>
         <Level isMobile contentPosition='right'>
-          ciao
+          <LevelItem>
+            <Icon size='medium' icon='spinner' />
+          </LevelItem>
+          <LevelItem>
+            miao
+          </LevelItem>
         </Level>
       </MediaContent>
     </Box>
