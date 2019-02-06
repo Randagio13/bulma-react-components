@@ -1,6 +1,10 @@
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
 import styled from 'styled-components'
+
+library.add(fas)
 
 interface ContentProps {
   size: 'small' | 'medium' | 'large'

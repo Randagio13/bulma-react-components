@@ -35,10 +35,13 @@ renderApp(
         </Content>
         <Level isMobile contentPosition='right'>
           <LevelItem>
-            <Icon size='medium' icon='spinner' />
+            <Icon size='small' icon='reply' />
           </LevelItem>
           <LevelItem>
-            miao
+            <Icon size='small' icon='retweet' />
+          </LevelItem>
+          <LevelItem>
+            <Icon size='small' icon='heart' />
           </LevelItem>
         </Level>
       </MediaContent>
