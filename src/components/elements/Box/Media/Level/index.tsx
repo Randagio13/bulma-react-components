@@ -22,6 +22,7 @@ const LevelContent = styled.div`
 `
 
 interface LevelProps {
+  children?: JSX.Element[]
   isMobile?: boolean
   className?: string
   contentPosition?: 'left' | 'right'
