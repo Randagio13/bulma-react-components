@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import styled from 'styled-components'
 import { Box, Image, MediaImage } from './src'
 import Level from './src/components/elements/Box/Media/Level'
 import LevelItem from './src/components/elements/Box/Media/Level/Item'
@@ -8,6 +9,10 @@ import MediaContent from './src/components/elements/Box/Media/MediaContent'
 import Content from './src/components/elements/Content'
 import Icon from './src/components/elements/Icon'
 import GlobalStyle from './src/global/style'
+
+const DivPreview = styled.div`
+  padding: 1.5rem;
+`
 
 const renderApp = (Component: any) => {
   ReactDOM.render(
@@ -19,11 +24,11 @@ const renderApp = (Component: any) => {
 }
 
 renderApp(
-  <div>
+  <DivPreview>
     <GlobalStyle />
     <Box>
       <MediaImage>
-        <Image size='128' src='https://bulma.io/images/placeholders/128x128.png' />
+        <Image size='64' src='https://bulma.io/images/placeholders/128x128.png' />
       </MediaImage>
       <MediaContent>
         <Content>
@@ -47,7 +52,7 @@ renderApp(
         </Level>
       </MediaContent>
     </Box>
-  </div>
+  </DivPreview>
 )
 
 if (Reflect.get(module, 'hot') !== undefined) {
