@@ -1,5 +1,6 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { css, StyledProps } from 'styled-components'
+import LevelItem from './Item'
 
 interface LevelContentProps {
   position?: 'left' | 'right'
@@ -12,8 +13,8 @@ const LevelContent = styled.div`
   flex-shrink: 0;
 
   ${(props: LevelContentProps) => props.position === 'left'
-    ? 'align-items: center; justify-content: flex-start;'
-    : 'align-items: center; justify-content: flex-end;'
+    ? 'display: flex; align-items: center; justify-content: flex-start;'
+    : 'display: flex; align-items: center; justify-content: flex-end;'
   }
 
   @media screen and (min-width: 769px), print {
@@ -32,22 +33,28 @@ class LevelComponent extends React.Component<LevelProps> {
   public render (): JSX.Element {
     const { children, className, contentPosition, isMobile } = this.props
     return (
-      <div className={className}>
+      <nav className={className}>
         <LevelContent position={contentPosition} isMobile={isMobile}>
           {children}
         </LevelContent>
-      </div>
+      </nav>
     )
   }
 }
 
-const Level = styled(LevelComponent)`
+const Level: StyledProps<any> = styled(LevelComponent)`
   align-items: center;
   justify-content: space-between;
 
   :not(:last-child) {
     margin-bottom: 1.5rem;
   }
+  ${(props: LevelProps) => props.isMobile && css`
+    ${LevelItem}:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 0.75rem;
+    }
+  `}
 
   code {
     border-radius: 4px;
