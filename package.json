@@ -12,7 +12,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest -u",
-    "release": "webpack"
+    "release": "webpack",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "jest": {
     "transform": {
@@ -49,10 +50,13 @@
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^4.1.11",
+    "@storybook/react": "^4.1.11",
     "@types/enzyme": "3.1.15",
     "@types/jest": "23.3.13",
     "@types/react-hot-loader": "4.1.0",
     "@types/react-test-renderer": "16.0.3",
+    "@types/storybook__react": "^4.0.0",
     "@types/webpack": "4.4.24",
     "@types/webpack-dev-server": "3.1.1",
     "babel-cli": "6.26.0",
@@ -70,6 +74,8 @@
     "jest-cli": "24.0.0",
     "node-sass": "^4.11.0",
     "preload-webpack-plugin": "^3.0.0-beta.3",
+    "react-docgen-typescript-loader": "^3.0.1",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-hot-loader": "4.6.3",
     "react-perf-devtool": "3.1.8",
     "react-test-renderer": "16.7.0",
