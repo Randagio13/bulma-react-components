@@ -10,7 +10,7 @@ interface Props {
   children: any
 }
 
-class BoxComponent extends React.Component<Props> {
+class BoxComponent extends React.PureComponent<Props> {
   public render () {
     const { className, children } = this.props
     return (

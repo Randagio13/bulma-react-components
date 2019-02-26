@@ -7,7 +7,7 @@ interface Props {
   alt?: string
 }
 
-class ImageComponent extends React.Component<Props> {
+class ImageComponent extends React.PureComponent<Props> {
   public render (): JSX.Element {
     const { className, src, alt } = this.props
     return (

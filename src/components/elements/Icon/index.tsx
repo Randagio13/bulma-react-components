@@ -25,7 +25,7 @@ interface Props extends ContentProps {
   icon: string | string[] | any
 }
 
-class Icon extends React.Component<Props> {
+class Icon extends React.PureComponent<Props> {
   public render (): JSX.Element {
     const { icon, size } = this.props
     return (

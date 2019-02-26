@@ -29,7 +29,7 @@ interface LevelProps {
   contentPosition?: 'left' | 'right'
 }
 
-class LevelComponent extends React.Component<LevelProps> {
+class LevelComponent extends React.PureComponent<LevelProps> {
   public render (): JSX.Element {
     const { children, className, contentPosition, isMobile } = this.props
     return (
