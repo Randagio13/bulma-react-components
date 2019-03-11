@@ -1,6 +1,35 @@
+import * as React from 'react'
 import styled from 'styled-components'
 
-const Button = styled.a`
+interface Props {
+  componentType: 'a' | 'button' | 'reset' | 'submit'
+  className?: string
+  children?: React.ReactChild
+}
+
+class Button extends React.PureComponent<Props> {
+  public static defaultProps: Props = {
+    componentType: 'a'
+  }
+  public render (): JSX.Element {
+    return this.typeSelection()
+  }
+  private typeSelection = (): JSX.Element => {
+    const { componentType, className, children, ...props } = this.props
+    switch (componentType) {
+      case 'a':
+      default:
+        return <a className={className} {...props}>{children}</a>
+      case 'button':
+        return <button className={className} {...props}>{children}</button>
+      case 'reset':
+      case 'submit':
+        return <input type={componentType} className={className} {...props} />
+    }
+  }
+}
+
+export default styled(Button)`
   background-color: #fff;
   border: 1px solid #dbdbdb;
   color: #363636;
@@ -29,5 +58,3 @@ const Button = styled.a`
   position: relative;
   vertical-align: top;
 `
-
-export default Button
