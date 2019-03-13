@@ -1,9 +1,12 @@
 const path = require('path');
-module.exports = (baseConfig, env, config) => {
+module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [{
-      loader: require.resolve('ts-loader')
+      loader: require.resolve('ts-loader'),
+      options: {
+        transpileOnly: true
+      }
     }, {
       loader: require.resolve('react-docgen-typescript-loader')
     }]

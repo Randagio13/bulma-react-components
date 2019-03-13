@@ -1,16 +1,15 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
-import { Box, Image, MediaImage } from '../src'
-import Level from '../src/components/elements/Box/Media/Level'
-import LevelItem from '../src/components/elements/Box/Media/Level/Item'
-import MediaContent from '../src/components/elements/Box/Media/MediaContent'
-import Content from '../src/components/elements/Content'
-import Icon from '../src/components/elements/Icon'
+import Level from '../components/elements/Box/Media/Level'
+import LevelItem from '../components/elements/Box/Media/Level/Item'
+import MediaContent from '../components/elements/Box/Media/MediaContent'
+import Content from '../components/elements/Content'
+import Icon from '../components/elements/Icon'
+import { Box, Image, MediaImage } from '../index'
 
 const stories = storiesOf('Elements', module)
 
-stories.add(
-  'Box',
+stories.add('Box',
   () => (
     <Box>
       <MediaImage>

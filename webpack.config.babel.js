@@ -44,7 +44,7 @@ const base = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        loader: 'ts-loader',
+        loader: 'awesome-typescript-loader',
         exclude: /node_modules/,
         options: {
           transpileOnly: true
@@ -204,8 +204,7 @@ const developmentConfig = {
         }]
       }
     }),
-    new CleanWebpackPlugin(['dist']),
-    new webpack.HashedModuleIdsPlugin(),
+    new CleanWebpackPlugin(),
     // new webpack.ProvidePlugin({
     //   ReactDOM: 'react-dom',
     //   React: 'react'
@@ -264,7 +263,7 @@ const productionConfig = {
         }]
       }
     }),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new webpack.HashedModuleIdsPlugin(),
     // new webpack.ProvidePlugin({
     //   ReactDOM: 'react-dom',
