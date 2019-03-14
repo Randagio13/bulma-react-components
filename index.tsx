@@ -55,7 +55,7 @@ renderApp(
       </Box>
     </DivPreview>
     <DivPreview>
-      <Button componentType='submit'>Button</Button>
+      <Button componentType='submit' colors='white'>Button</Button>
     </DivPreview>
   </DivPreview>
 )
