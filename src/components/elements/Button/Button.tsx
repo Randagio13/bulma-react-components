@@ -35,7 +35,16 @@ export default styled(Button)`
     z-index: 2;
     border-color: #b5b5b5;
     color: #363636;
-    ${(props: Props) => props.colors === 'white' && 'background-color: #f9f9f9; border-color: transparent; color: #0a0a0a;'}
+    ${(props: Props) => props.colors === 'white'
+      && 'background-color: #f9f9f9; border-color: transparent; color: #0a0a0a;'}
+    ${(props: Props) => props.colors === 'light'
+      && 'background-color: #eeeeee; border-color: transparent; color: #363636;'}
+    ${(props: Props) => props.colors === 'dark'
+      && 'background-color: #2f2f2f; border-color: transparent; color: whitesmoke;'}
+    ${(props: Props) => props.colors === 'black'
+      && 'background-color: #040404; border-color: transparent; color: white;'}
+    ${(props: Props) => props.colors === 'text'
+      && 'background-color: whitesmoke; border-color: transparent; color: #363636;'}
   }
   background-color: #fff;
   border: 1px solid #dbdbdb;
@@ -65,4 +74,12 @@ export default styled(Button)`
   position: relative;
   vertical-align: top;
   ${(props: Props) => props.colors === 'white' && 'background-color: white; border-color: transparent; color: #0a0a0a;'}
+  ${(props: Props) => props.colors === 'light'
+  && 'background-color: whitesmoke; border-color: transparent; color: #363636;'}
+  ${(props: Props) => props.colors === 'dark'
+  && 'background-color: #363636; border-color: transparent; color: whitesmoke;'}
+  ${(props: Props) => props.colors === 'black'
+  && 'background-color: #0a0a0a; border-color: transparent; color: white;'}
+  ${(props: Props) => props.colors === 'text'
+  && 'background-color: transparent; border-color: transparent; color: #4a4a4a; text-decoration: underline;'}
 `

@@ -56,6 +56,10 @@ renderApp(
     </DivPreview>
     <DivPreview>
       <Button componentType='submit' colors='white'>Button</Button>
+      <Button componentType='submit' colors='light'>Button</Button>
+      <Button componentType='submit' colors='dark'>Button</Button>
+      <Button componentType='submit' colors='black'>Button</Button>
+      <Button componentType='submit' colors='text'>Button</Button>
     </DivPreview>
   </DivPreview>
 )
