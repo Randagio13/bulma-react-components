@@ -60,6 +60,7 @@ renderApp(
       <Button componentType='submit' colors='dark'>Button</Button>
       <Button componentType='submit' colors='black'>Button</Button>
       <Button componentType='submit' colors='text'>Button</Button>
+      <Button componentType='submit' colors='primary'>Button</Button>
     </DivPreview>
   </DivPreview>
 )

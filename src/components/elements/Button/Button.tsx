@@ -1,11 +1,29 @@
+import { string } from 'prop-types'
 import * as React from 'react'
 import styled from 'styled-components'
 
 interface Props {
   componentType: 'a' | 'button' | 'reset' | 'submit'
-  colors?: 'white' | 'light' | 'dark' | 'black' | 'text'
+  colors?: 'white' | 'light' | 'dark' | 'black' | 'text' | 'primary'
   className?: string
   children?: React.ReactChild
+  theme?: {
+    primary: {
+      main: {
+        background: string,
+        color: string
+      },
+      hover: {
+        background: string,
+        color: string
+      }
+    },
+    link: string,
+    info: string,
+    success: string,
+    warning: string,
+    danger: string
+  }
 }
 
 class Button extends React.PureComponent<Props> {
@@ -45,6 +63,18 @@ export default styled(Button)`
       && 'background-color: #040404; border-color: transparent; color: white;'}
     ${(props: Props) => props.colors === 'text'
       && 'background-color: whitesmoke; border-color: transparent; color: #363636;'}
+    ${(props: Props) => {
+      const { colors, theme } = props
+      switch (colors) {
+        case 'primary':
+          return Reflect.get(theme, 'primary') && Reflect.get(theme.primary, 'hover')
+          ? `background-color: ${theme.primary.hover.background};
+            border-color: transparent; color: ${theme.primary.hover.color};`
+          : 'background-color: #00c4a7; border-color: transparent; color: #fff;'
+        default:
+          return ''
+      }
+    }}
   }
   background-color: #fff;
   border: 1px solid #dbdbdb;
@@ -82,4 +112,16 @@ export default styled(Button)`
   && 'background-color: #0a0a0a; border-color: transparent; color: white;'}
   ${(props: Props) => props.colors === 'text'
   && 'background-color: transparent; border-color: transparent; color: #4a4a4a; text-decoration: underline;'}
+  ${(props: Props) => {
+    const { colors, theme } = props
+    switch (colors) {
+      case 'primary':
+        return Reflect.get(theme, 'primary') && Reflect.get(theme.primary, 'main')
+        ? `background-color: ${theme.primary.main.background};
+          border-color: transparent; color: ${theme.primary.main.color};`
+        : 'background-color: #00d1b2; border-color: transparent; color: #fff;'
+      default:
+        return ''
+    }
+  }}
 `
