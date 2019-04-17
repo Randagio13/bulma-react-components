@@ -5,22 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "browser-preview",
-      "name": "Browser Preview: Attach",
-      "request": "attach",
-      "webRoot": "${workspaceFolder}",
-      "sourceMapPathOverrides": {
-        "webpack:///*": "${webRoot}/src/*"
-      }
-    },
-    {
-      "type": "browser-preview",
+      "type": "chrome",
       "request": "launch",
-      "name": "Browser Preview: Launch",
+      "name": "Launch Chrome",
       "url": "http://localhost:1319",
-      "webRoot": "${workspaceFolder}",
+      "webRoot": "${workspaceFolder}/",
+      "smartStep": true,
       "sourceMapPathOverrides": {
-        "webpack:///*": "${webRoot}/src/*"
+        "webpack:///./*": "${webRoot}src/*"
       }
     }
   ]
