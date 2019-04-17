@@ -1,30 +1,6 @@
-import { string } from 'prop-types'
 import * as React from 'react'
 import styled from 'styled-components'
-
-interface Props {
-  componentType: 'a' | 'button' | 'reset' | 'submit'
-  colors?: 'white' | 'light' | 'dark' | 'black' | 'text' | 'primary'
-  className?: string
-  children?: React.ReactChild
-  theme?: {
-    primary: {
-      main: {
-        background: string,
-        color: string
-      },
-      hover: {
-        background: string,
-        color: string
-      }
-    },
-    link: string,
-    info: string,
-    success: string,
-    warning: string,
-    danger: string
-  }
-}
+import Props from './ButtonTypes'
 
 class Button extends React.PureComponent<Props> {
   public static defaultProps: Props = {
@@ -71,6 +47,31 @@ export default styled(Button)`
           ? `background-color: ${theme.primary.hover.background};
             border-color: transparent; color: ${theme.primary.hover.color};`
           : 'background-color: #00c4a7; border-color: transparent; color: #fff;'
+        case 'link':
+          return Reflect.get(theme, 'link') && Reflect.get(theme.link, 'hover')
+          ? `background-color: ${theme.link.hover.background};
+            border-color: transparent; color: ${theme.link.hover.color};`
+          : 'background-color: #276cda; border-color: transparent; color: #fff;'
+        case 'info':
+          return Reflect.get(theme, 'info') && Reflect.get(theme.info, 'hover')
+          ? `background-color: ${theme.info.hover.background};
+            border-color: transparent; color: ${theme.info.hover.color};`
+          : 'background-color: #1496ed; border-color: transparent; color: #fff;'
+        case 'success':
+          return Reflect.get(theme, 'success') && Reflect.get(theme.success, 'hover')
+          ? `background-color: ${theme.success.hover.background};
+            border-color: transparent; color: ${theme.success.hover.color};`
+          : 'background-color: #22c65b; border-color: transparent; color: #fff;'
+        case 'warning':
+          return Reflect.get(theme, 'warning') && Reflect.get(theme.warning, 'hover')
+          ? `background-color: ${theme.warning.hover.background};
+            border-color: transparent; color: ${theme.warning.hover.color};`
+          : 'background-color: #ffdb4a; border-color: transparent; color: rgba(0, 0, 0, 0.7);'
+        case 'danger':
+          return Reflect.get(theme, 'danger') && Reflect.get(theme.danger, 'hover')
+          ? `background-color: ${theme.danger.hover.background};
+            border-color: transparent; color: ${theme.danger.hover.color};`
+          : 'background-color: #ff2b56; border-color: transparent; color: #fff;'
         default:
           return ''
       }
@@ -120,6 +121,31 @@ export default styled(Button)`
         ? `background-color: ${theme.primary.main.background};
           border-color: transparent; color: ${theme.primary.main.color};`
         : 'background-color: #00d1b2; border-color: transparent; color: #fff;'
+      case 'link':
+        return Reflect.get(theme, 'link') && Reflect.get(theme.link, 'main')
+        ? `background-color: ${theme.link.main.background};
+          border-color: transparent; color: ${theme.link.main.color};`
+        : 'background-color: #3273dc; border-color: transparent; color: #fff;'
+      case 'info':
+        return Reflect.get(theme, 'info') && Reflect.get(theme.info, 'main')
+        ? `background-color: ${theme.info.main.background};
+          border-color: transparent; color: ${theme.info.main.color};`
+        : 'background-color: #209cee; border-color: transparent; color: #fff;'
+      case 'success':
+        return Reflect.get(theme, 'success') && Reflect.get(theme.success, 'main')
+        ? `background-color: ${theme.success.main.background};
+          border-color: transparent; color: ${theme.success.main.color};`
+        : 'background-color: #23d160; border-color: transparent; color: #fff;'
+      case 'warning':
+        return Reflect.get(theme, 'warning') && Reflect.get(theme.warning, 'main')
+        ? `background-color: ${theme.warning.main.background};
+          border-color: transparent; color: ${theme.warning.main.color};`
+        : 'background-color: #ffdd57; border-color: transparent; color: rgba(0, 0, 0, 0.7);'
+      case 'danger':
+        return Reflect.get(theme, 'danger') && Reflect.get(theme.danger, 'main')
+        ? `background-color: ${theme.danger.main.background};
+          border-color: transparent; color: ${theme.danger.main.color};`
+        : 'background-color: #ff3860; border-color: transparent; color: #fff;'
       default:
         return ''
     }

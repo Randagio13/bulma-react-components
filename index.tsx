@@ -14,11 +14,19 @@ const DivPreview = styled.div`
   padding: 1.5rem;
 `
 
+const DivPreviewFlex = styled.div`
+  padding: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+`
+
 const renderApp = (Component: any) => {
   ReactDOM.render(
-    <AppContainer>
-      {Component}
-    </AppContainer>,
+    (
+      <AppContainer>
+        {Component}
+      </AppContainer>
+    ),
     document.getElementById('app')
   )
 }
@@ -54,14 +62,46 @@ renderApp(
         </MediaContent>
       </Box>
     </DivPreview>
-    <DivPreview>
-      <Button componentType='submit' colors='white'>Button</Button>
-      <Button componentType='submit' colors='light'>Button</Button>
-      <Button componentType='submit' colors='dark'>Button</Button>
-      <Button componentType='submit' colors='black'>Button</Button>
-      <Button componentType='submit' colors='text'>Button</Button>
-      <Button componentType='submit' colors='primary'>Button</Button>
-    </DivPreview>
+    <DivPreviewFlex>
+      <DivPreview>
+        <Button componentType='submit' colors='white'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='light'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='dark'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='black'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='text'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='primary'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='link'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='info'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='success'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='warning'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='danger'>Button</Button>
+      </DivPreview>
+    </DivPreviewFlex>
+    <DivPreviewFlex>
+      <DivPreview>
+        <Button componentType='submit' colors='danger'>Button</Button>
+      </DivPreview>
+    </DivPreviewFlex>
   </DivPreview>
 )
 

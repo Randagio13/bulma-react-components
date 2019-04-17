@@ -31,7 +31,7 @@ const PATHS = {
   images: path.join(__dirname, 'src', 'images')
 }
 
-const devtool = isProduction ? 'source-map' : 'cheap-module-eval-source-map'
+const devtool = isProduction ? 'source-map' : 'source-map'
 const mode = isProduction ? 'production' : 'development'
 
 console.log('Tool -> ⚙️ ', devtool, mode)
