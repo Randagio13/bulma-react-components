@@ -6,6 +6,7 @@ import { Box, Button, Image, MediaImage } from './src'
 import Level from './src/components/elements/Box/Media/Level'
 import LevelItem from './src/components/elements/Box/Media/Level/Item'
 import MediaContent from './src/components/elements/Box/Media/MediaContent'
+import ButtonsGroup from './src/components/elements/ButtonsGroup/index'
 import Content from './src/components/elements/Content'
 import Icon from './src/components/elements/Icon'
 import GlobalStyle from './src/global/style'
@@ -99,7 +100,42 @@ renderApp(
     </DivPreviewFlex>
     <DivPreviewFlex>
       <DivPreview>
-        <Button componentType='submit' colors='danger'>Button</Button>
+        <Button componentType='submit' colors='danger' size='small'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='danger' size='normal'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='danger' size='medium'>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button componentType='submit' colors='danger' size='large'>Button</Button>
+      </DivPreview>
+    </DivPreviewFlex>
+    <DivPreviewFlex>
+      <DivPreview>
+        <ButtonsGroup size='small'>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+        </ButtonsGroup>
+      </DivPreview>
+      <DivPreview>
+        <ButtonsGroup size='medium'>
+          <Button componentType='submit' colors='danger' size='small'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+        </ButtonsGroup>
+      </DivPreview>
+      <DivPreview>
+        <ButtonsGroup size='large'>
+          <Button componentType='submit' colors='danger' size='medium'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger'>Button</Button>
+          <Button componentType='submit' colors='danger' size='large'>Button</Button>
+        </ButtonsGroup>
       </DivPreview>
     </DivPreviewFlex>
   </DivPreview>

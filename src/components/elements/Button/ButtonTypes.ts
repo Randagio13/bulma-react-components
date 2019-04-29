@@ -66,5 +66,5 @@ export default interface Props {
       }
     }
   }
-  size: 'small' | 'normal' | 'medium' | 'large'
+  size?: 'small' | 'normal' | 'medium' | 'large'
 }

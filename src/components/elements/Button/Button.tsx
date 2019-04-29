@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import ButtonsGroup from '../ButtonsGroup'
 import Props from './ButtonTypes'
 
 class Button extends React.PureComponent<Props> {
@@ -113,6 +114,32 @@ export default styled(Button)`
   && 'background-color: #0a0a0a; border-color: transparent; color: white;'}
   ${(props: Props) => props.colors === 'text'
   && 'background-color: transparent; border-color: transparent; color: #4a4a4a; text-decoration: underline;'}
+  ${(props: Props) => {
+    const { size } = props
+    switch (size) {
+      case 'small':
+        return `
+          not(${Button}) { border-radius: 2px; font-size: 0.75rem; }
+          ${Button} { border-radius: 2px !important; font-size: 0.75rem !important; }
+        `
+      case 'normal':
+      default:
+        return `
+          not(${Button}) { font-size: 1rem; }
+          ${Button} { font-size: 1rem !important; }
+        `
+      case 'medium':
+        return `
+          not(${Button}) { font-size: 1.25rem; }
+          ${Button} { font-size: 1.25rem !important; }
+        `
+      case 'large':
+        return `
+          not(${Button}) { font-size: 1.5rem; }
+          ${Button} { font-size: 1.5rem !important; }
+        `
+    }
+  }}
   ${(props: Props) => {
     const { colors, theme } = props
     switch (colors) {
