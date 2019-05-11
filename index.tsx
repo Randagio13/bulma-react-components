@@ -138,6 +138,38 @@ renderApp(
         </ButtonsGroup>
       </DivPreview>
     </DivPreviewFlex>
+    <DivPreviewFlex>
+      <DivPreview>
+        <Button colors='white' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='light' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='dark' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='black' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='primary' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='link' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='info' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='success' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='warning' outlined>Button</Button>
+      </DivPreview>
+      <DivPreview>
+        <Button colors='danger' outlined>Button</Button>
+      </DivPreview>
+    </DivPreviewFlex>
   </DivPreview>
 )
 

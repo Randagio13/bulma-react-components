@@ -1,5 +1,5 @@
 export default interface Props {
-  componentType: 'a' | 'button' | 'reset' | 'submit'
+  componentType?: 'a' | 'button' | 'reset' | 'submit'
   colors?: 'white' | 'light' | 'dark' | 'black' | 'text' |
            'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger'
   className?: string
@@ -67,4 +67,5 @@ export default interface Props {
     }
   }
   size?: 'small' | 'normal' | 'medium' | 'large'
+  outlined?: boolean
 }
