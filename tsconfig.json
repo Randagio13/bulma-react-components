@@ -1,33 +1,25 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "target": "es5",
-        "jsx": "react",
-        "allowJs": true,
-        "baseUrl": "./",
-        "lib": [
-            "esnext",
-            "dom.iterable",
-            "dom"
-        ],
-        "paths": {
-            "components": ["src/components"],
-            "containers": ["src/containers"],
-            "constants": ["src/constants"],
-            "types": ["src/types"],
-            "images": ["src/images"],
-            "reducers": ["src/reducers"],
-            "reducers/*": ["src/reducers/*"],
-            "helpers": ["src/helpers"],
-            "routes": ["src/routes"]
-        }
-    },
-    "include": [
-        "./src/**/*"
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "exclude": [
-        "node_modules"
-    ]
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src"
+  ]
 }
