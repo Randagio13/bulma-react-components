@@ -2,23 +2,37 @@ import * as React from 'react'
 import logo from './logo.svg'
 import './App.scss'
 import BulmaTheme from './components/BulmaTheme'
-import styled from 'styled-components'
+import Button from './components/Button/Button'
+import { ThemeType } from './components/BulmaTheme/BulmaTheme'
 
-const Text = styled.p`
-  color: ${props => props.theme.colors.$black};
-`
+console.log(Text)
+
+const theme: ThemeType = {
+  colors: { turquoise: 'green' },
+  button: {
+    backgroundColors: {
+      primary: 'green'
+    }
+  }
+}
 
 const App: React.FC = () => {
   return (
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <BulmaTheme theme={{ colors: { $black: 'green' } }}>
-          <Text>cioa tea</Text>
+        <BulmaTheme theme={theme}>
+          <Button color='primary'>cioa tea</Button>
         </BulmaTheme>
+        <Button color='warning'>Button</Button>
+        <Button>Button</Button>
+        <Button color='primary' type='a'>
+          without theme
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Button type='submit'>Submit input without theme</Button>
         <a
           className='App-link'
           href='https://reactjs.org'
@@ -27,6 +41,9 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        <Button color='primary' type='reset'>
+          Reset input without theme
+        </Button>
       </header>
     </div>
   )
