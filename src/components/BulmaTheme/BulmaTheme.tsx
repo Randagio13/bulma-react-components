@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ThemeProvider, ThemeProviderProps } from 'styled-components'
 import variables, { elementBackgroundColors, elementColors } from './variables'
+import MiniResetStyle from './MiniResetStyle'
 
 export interface ThemeType {
   colors?: {
@@ -70,6 +71,11 @@ const BulmaTheme: ThemeType = {
 }
 
 const Theme = ({ theme, children }: ThemeProps) => (
-  <ThemeProvider theme={theme || BulmaTheme}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme || BulmaTheme}>
+    <React.Fragment>
+      <MiniResetStyle />
+      {children}
+    </React.Fragment>
+  </ThemeProvider>
 )
 export default Theme
