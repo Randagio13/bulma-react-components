@@ -34,6 +34,7 @@ const defaultCss = css`
   padding-top: calc(0.375em - 1px);
   position: relative;
   vertical-align: top;
+  text-decoration: none;
 `
 
 const padding = css`
