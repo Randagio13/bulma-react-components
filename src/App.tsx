@@ -28,7 +28,10 @@ const App: React.FC = () => {
         {/* <img src={logo} className='App-logo' alt='logo' /> */}
         <Container>
           <BulmaTheme theme={theme}>
-            <Button color='primary'>Button with theme</Button>
+            <React.Fragment>
+              <Button color='primary'>Button with theme</Button>
+              <a>ciao</a>
+            </React.Fragment>
           </BulmaTheme>
         </Container>
         <Container>
